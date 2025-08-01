@@ -111,6 +111,7 @@ OOP
 OS
 OWASP
 Oliphant
+Omarchy
 PID
 POSIX
 Pacman

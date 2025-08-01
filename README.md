@@ -2,8 +2,8 @@
 
 ![image](./setup.png)
 
-- OS: Debian 12 Bookworm
-- WM: [Sway](https://swaywm.org/) or [i3](https://i3wm.org/)
+- OS: [Archlinux](https://archlinux.org/) btw
+- WM: [Hyprland](https://github.com/hyprwm/Hyprland)
 - Terminal: [Tmux](https://github.com/tmux/tmux) inside [Ghostty](https://ghostty.org/)
 - Bar: [Waybar](https://github.com/Alexays/Waybar)
 - Shell: [Zsh](https://www.zsh.org/)
@@ -13,41 +13,15 @@
 
 ## Requirements
 
-Ensure you have the following installed on your system:
-
 - [Stow](https://www.gnu.org/software/stow/)
 - Git
 
-For my system (which uses `apt`):
-
-```Bash
-sudo apt install git
-sudo apt install stow
-```
-
 ## Installation
 
-To install and set the dotfiles in a new machine clone the repo inside `$HOME` **(personal preference and makes it easy to work with `stow`)**:
+1. Install Arch
+2. Install Omarchy
+3. Clone repo
 
-```Bash
-git clone https://github.com/MoXcz/dotfiles
-cd dotfiles
-./scripts/runs/sway_i3
-./scripts/run.sh
-```
+## From:
 
-#### Script
-
-Select `Run All` on the menu that appears (if `bemenu` is not installed run `run_bak.sh`; should be installed if running the installation script for sway first):
-
-Then, use GNU stow to create symlinks
-
-```Bash
-stow .
-```
-
-## Greatly Inspired by
-
-1. https://github.com/josean-dev/dev-environment-files
-2. https://github.com/ThePrimeagen/init.lua
-3. https://github.com/tjdevries/config.nvim
+1. [Omarchy](https://omarchy.org/)
