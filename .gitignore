@@ -1,0 +1,5 @@
+nvim
+.config/tmux/plugins/
+.config/zsh/plugins
+.config/zsh/.zcompdump
+.config/nvim
