@@ -1,4 +1,4 @@
-font-family= Iosevka Term
+font-family= "IosevkaTerm Nerd Font Mono"
 shell-integration-features=sudo,title,no-cursor
 font-size=14
 mouse-hide-while-typing=true
