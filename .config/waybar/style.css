@@ -7,8 +7,8 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: CaskaydiaMono Nerd Font Propo;
-  font-size: 13px;
+  font-family: CaskaydiaMono Nerd Font;
+  font-size: 12px;
 }
 
 .modules-left {
@@ -26,6 +26,10 @@
   min-width: 9px;
 }
 
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
 #tray,
 #cpu,
 #battery,
@@ -33,13 +37,14 @@
 #bluetooth,
 #pulseaudio,
 #clock,
-#custom-power-menu {
+#custom-omarchy,
+#temperature {
   min-width: 12px;
   margin: 0 7.5px;
 }
 
 #custom-expand-icon {
-  margin-right: 12px;
+  margin-right: 7px;
 }
 
 tooltip {
@@ -49,4 +54,17 @@ tooltip {
 #language {
   min-width: 12px;
   margin: 0 7.5px;
+}
+
+#temperature.warning,
+#battery.warning {
+  color: #e7a43d;
+}
+#temperature.critical,
+#battery.critical {
+  color: #db2828;
+}
+
+#battery.charging {
+  color: green;
 }
