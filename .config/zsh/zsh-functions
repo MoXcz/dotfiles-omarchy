@@ -100,3 +100,47 @@ refresh-xcompose() {
   pkill fcitx5
   uwsm app -- fcitx5 >/dev/null 2>&1 &
 }
+
+function gcl() {
+  if [ "$#" -ne 1 ]; then
+    echo "Usage: gcl <github-repo>"
+    return 1
+  fi
+
+  local REPO="$1"
+  local WORK_DIR="$HOME/workspace/github.com"
+  local REPO_NAME=$(basename "$REPO" .git)
+  local CLONE_DIR="$WORK_DIR/$REPO_NAME"
+
+  if [ ! -d $WORK_DIR ]; then
+    mkdir -p $WORK_DIR
+  fi
+
+  git clone $REPO $CLONE_DIR
+}
+
+function book() {
+  if [ "$#" -ne 0 ]; then
+    echo "Usage: book"
+    return 1
+  fi
+
+  local BOOK_DIR="$HOME/Documents/books"
+  if [ ! -d $BOOK_DIR ]; then
+    echo "No books available"
+    mkdir -p $BOOK_DIR
+    return 1
+  fi
+
+  local BOOK=$(find ~/Documents/books -maxdepth 1 -name "*pdf" | fzf)
+  if [[ -z $BOOK ]]; then
+      return 0
+  fi
+
+  if ! pacman -Q "zathura" &>/dev/null; then
+      echo "zathura is not installed"
+      sudo pacman -S zathura zathura-pdf-poppler
+  fi
+
+  zathura $BOOK &
+}
