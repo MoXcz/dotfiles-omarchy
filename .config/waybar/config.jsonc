@@ -37,6 +37,7 @@
       "7": "7",
       "8": "8",
       "9": "9",
+      "10": "0",
       "default": "",
       "active": "󱓻"
     },
@@ -51,6 +52,7 @@
   "custom/omarchy": {
     "format": "<span font='omarchy'></span>",
     "on-click": "omarchy-menu",
+    "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
   },
   "custom/update": {
@@ -64,13 +66,13 @@
   "cpu": {
     "interval": 5,
     "format": "| 󰍛 {usage}%",
-    "on-click": "$TERMINAL -e btop"
+    "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "memory": {
     "interval": 5,
     "format": "|  {}%",
     "max-length": 10,
-    "on-click": "$TERMINAL -e btop"
+    "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "clock": {
     "format": "{:L%A %H:%M}",
@@ -139,13 +141,15 @@
   "bluetooth": {
     "format": "",
     "format-disabled": "󰂲",
-    "format-connected": "",
+    "format-off": "󰂲",
+    "format-connected": "󰂱",
+    "format-no-controller": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "blueberry"
+    "on-click": "omarchy-launch-bluetooth"
   },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "$TERMINAL --class=Wiremix -e wiremix",
+    "on-click": "omarchy-launch-or-focus-tui wiremix",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
