@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/ ~/Documents ~/workspace/ -mindepth 1 -maxdepth 2 -type d | fzf)
+    selected=$(find ~/ ~/Documents ~/workspace/ -mindepth 1 -maxdepth 2 -type d | sort | uniq | fzf)
 fi
 
 if [[ -z $selected ]]; then
