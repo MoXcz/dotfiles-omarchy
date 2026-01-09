@@ -24,7 +24,11 @@ if [ $? -eq 0 ]; then
     ~/.local/share/nvim/ \
     ~/.local/share/nvim/ \
     ~/.cache/nvim/ \
-    ~/.config/hypr/
+    ~/.config/hypr/ \
+    ~/.config/alacritty \
+    ~/.config/ghostty \
+    ~/.config/waybar \
+    ~/.config/kitty
 
   cd "$REPO_NAME"
   stow .
