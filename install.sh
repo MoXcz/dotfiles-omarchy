@@ -40,7 +40,7 @@ fi
 echo "Installing packages..."
 
 yay -S \
-  zsh zen-browser syncting \
+  zsh zen-browser syncthing \
   tmux syncthing protonplus ghostty \
   vulkan-radeon vulkan-tools \
   ttf-iosevka-term ttf-iosevkaterm-nerd
