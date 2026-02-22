@@ -39,7 +39,9 @@
 #custom-omarchy,
 #temperature,
 #custom-screenrecording-indicator,
-#custom-update {
+#custom-update,
+#custom-gpu,
+#custom-cpu {
   min-width: 12px;
   margin: 0 7.5px;
 }

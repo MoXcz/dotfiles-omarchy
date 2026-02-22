@@ -20,7 +20,8 @@
     "network",
     "pulseaudio",
     "temperature",
-    "cpu",
+    "custom/gpu",
+    "custom/cpu",
     "memory",
     "battery"
   ],
@@ -212,12 +213,14 @@
     "tooltip": true,
     "tooltip-format": "CPU Temp: {temperatureC}°C"
   },
-  "gpu_temp": {
-    "hwmon-path": [
-      "/sys/class/hwmon/hwmon3/temp1_input"
-    ],
-    "format": "| GPU: {temperatureC}°C",
-    "tooltip": true,
-    "interval": 5
+  "custom/gpu": {
+    "exec": "~/.config/waybar/scripts/gpu.sh",
+    "interval": 5,
+    "tooltip": false
+  },
+  "custom/cpu": {
+    "exec": "~/.config/waybar/scripts/cpu.sh",
+    "interval": 5,
+    "tooltip": false
   }
 }
